@@ -1,5 +1,9 @@
 # Swishfolio
 
+A neo-brutalist WordPress block theme with bold typography, high-contrast colors, and sharp geometric design elements. Built for creative portfolios, agencies, and modern websites.
+
+**Website:** [swishfolio.com](https://swishfolio.com)
+
 ## Third-Party Code
 
 ### Fonts (Google Fonts - OFL License)
