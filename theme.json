@@ -292,7 +292,7 @@
 			"letterSpacing": "0",
 			"lineHeight": "1.6"
 		},
-		"css": ":root { --neo-shadow-sm: 4px 4px 0px 0px #000; --neo-shadow-md: 8px 8px 0px 0px #000; --neo-shadow-lg: 12px 12px 0px 0px #000; --neo-shadow-xl: 16px 16px 0px 0px #000; --neo-border: 4px solid #000; --neo-border-thin: 2px solid #000; --neo-border-heavy: 8px solid #000; --neo-accent: #FF6B6B; --neo-secondary: #FFD93D; --neo-muted: #C4B5FD; --neo-cream: #FFFDF5; }",
+		"css": ":root { --neo-shadow-sm: 4px 4px 0px 0px #000; --neo-shadow-md: 8px 8px 0px 0px #000; --neo-shadow-lg: 12px 12px 0px 0px #000; --neo-shadow-xl: 16px 16px 0px 0px #000; --neo-border: 4px solid #000; --neo-border-thin: 2px solid #000; --neo-border-heavy: 8px solid #000; --neo-accent: #FF6B6B; --neo-secondary: #FFD93D; --neo-muted: #C4B5FD; --neo-cream: #FFFDF5; } @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }",
 		"blocks": {
 			"core/avatar": {
 				"border": {
