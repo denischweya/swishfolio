@@ -206,6 +206,82 @@ if ( ! function_exists( 'swishfolio_block_styles' ) ) :
 				}',
 			)
 		);
+
+		// Terminal Navigation Style - CLI-inspired command prompt aesthetic
+		register_block_style(
+			'core/navigation',
+			array(
+				'name'         => 'terminal-cli',
+				'label'        => __( 'Terminal CLI', 'swishfolio' ),
+				'inline_style' => '
+				.wp-block-navigation.is-style-terminal-cli {
+					font-family: "Fira Code", "Monaco", "Consolas", monospace;
+				}
+				.wp-block-navigation.is-style-terminal-cli .wp-block-navigation-item__content {
+					padding: 0.5rem 1rem;
+					color: var(--wp--preset--color--contrast, #33ff00);
+					background: transparent;
+					border: none;
+					box-shadow: none;
+					text-transform: uppercase;
+					letter-spacing: 0.05em;
+					transition: all 0.15s ease-out;
+					position: relative;
+				}
+				.wp-block-navigation.is-style-terminal-cli .wp-block-navigation-item__content::before {
+					content: "";
+					opacity: 0;
+					transition: opacity 0.15s ease-out;
+				}
+				.wp-block-navigation.is-style-terminal-cli .wp-block-navigation-item__content:hover {
+					color: var(--wp--preset--color--accent-2, #ffb000);
+					text-shadow: 0 0 8px currentColor;
+				}
+				.wp-block-navigation.is-style-terminal-cli .wp-block-navigation-item__content:hover::before {
+					content: "> ";
+					opacity: 1;
+				}
+				.wp-block-navigation.is-style-terminal-cli .wp-block-navigation-item.current-menu-item > .wp-block-navigation-item__content {
+					color: var(--wp--preset--color--accent-2, #ffb000);
+				}
+				.wp-block-navigation.is-style-terminal-cli .wp-block-navigation-item.current-menu-item > .wp-block-navigation-item__content::before {
+					content: "> ";
+					opacity: 1;
+				}',
+			)
+		);
+
+		// Terminal Bordered Navigation - with glowing borders
+		register_block_style(
+			'core/navigation',
+			array(
+				'name'         => 'terminal-bordered',
+				'label'        => __( 'Terminal Bordered', 'swishfolio' ),
+				'inline_style' => '
+				.wp-block-navigation.is-style-terminal-bordered {
+					font-family: "Fira Code", "Monaco", "Consolas", monospace;
+				}
+				.wp-block-navigation.is-style-terminal-bordered .wp-block-navigation-item__content {
+					padding: 0.5rem 1rem;
+					color: var(--wp--preset--color--contrast, #33ff00);
+					background: var(--wp--preset--color--base, #0a0a0a);
+					border: 1px solid var(--wp--preset--color--contrast, #33ff00);
+					box-shadow: 0 0 5px color-mix(in srgb, var(--wp--preset--color--contrast, #33ff00) 30%, transparent);
+					text-transform: uppercase;
+					letter-spacing: 0.05em;
+					transition: all 0.15s ease-out;
+				}
+				.wp-block-navigation.is-style-terminal-bordered .wp-block-navigation-item__content:hover {
+					background: var(--wp--preset--color--contrast, #33ff00);
+					color: var(--wp--preset--color--base, #0a0a0a);
+					box-shadow: 0 0 15px color-mix(in srgb, var(--wp--preset--color--contrast, #33ff00) 50%, transparent);
+				}
+				.wp-block-navigation.is-style-terminal-bordered .wp-block-navigation-item.current-menu-item > .wp-block-navigation-item__content {
+					background: var(--wp--preset--color--contrast, #33ff00);
+					color: var(--wp--preset--color--base, #0a0a0a);
+				}',
+			)
+		);
 	}
 endif;
 add_action( 'init', 'swishfolio_block_styles' );
