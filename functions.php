@@ -93,7 +93,7 @@ if ( ! function_exists( 'swishfolio_block_styles' ) ) :
 			)
 		);
 
-		// Neo-brutalist Navigation Styles
+		// Navigation Styles - Using WordPress preset colors for style variation support
 		register_block_style(
 			'core/navigation',
 			array(
@@ -101,20 +101,20 @@ if ( ! function_exists( 'swishfolio_block_styles' ) ) :
 				'label'        => __( 'Neo Bordered', 'swishfolio' ),
 				'inline_style' => '
 				.wp-block-navigation.is-style-neo-bordered .wp-block-navigation-item__content {
-					border: 4px solid #000;
+					border: var(--sf-border, 4px solid var(--wp--preset--color--contrast));
 					padding: 0.5rem 1rem;
-					background: var(--neo-cream, #FFFDF5);
-					box-shadow: 4px 4px 0px 0px #000;
+					background: var(--wp--preset--color--accent-5);
+					box-shadow: var(--sf-shadow-sm, 4px 4px 0px 0px var(--wp--preset--color--contrast));
 					transition: all 0.1s ease-out;
 				}
 				.wp-block-navigation.is-style-neo-bordered .wp-block-navigation-item__content:hover {
-					background: var(--neo-accent, #FF6B6B);
-					box-shadow: 6px 6px 0px 0px #000;
-					transform: translate(-2px, -2px);
+					background: var(--wp--preset--color--accent-1);
+					box-shadow: var(--sf-shadow-md, 6px 6px 0px 0px var(--wp--preset--color--contrast));
+					transform: var(--sf-hover-transform, translate(-2px, -2px));
 				}
 				.wp-block-navigation.is-style-neo-bordered .wp-block-navigation-item__content:active {
 					box-shadow: none;
-					transform: translate(2px, 2px);
+					transform: var(--sf-active-transform, translate(2px, 2px));
 				}',
 			)
 		);
@@ -126,24 +126,24 @@ if ( ! function_exists( 'swishfolio_block_styles' ) ) :
 				'label'        => __( 'Neo Pills', 'swishfolio' ),
 				'inline_style' => '
 				.wp-block-navigation.is-style-neo-pills .wp-block-navigation-item__content {
-					border: 4px solid #000;
+					border: var(--sf-border, 4px solid var(--wp--preset--color--contrast));
 					border-radius: 9999px;
 					padding: 0.5rem 1.5rem;
-					background: var(--neo-secondary, #FFD93D);
-					box-shadow: 4px 4px 0px 0px #000;
+					background: var(--wp--preset--color--accent-2);
+					box-shadow: var(--sf-shadow-sm, 4px 4px 0px 0px var(--wp--preset--color--contrast));
 					transition: all 0.1s ease-out;
 				}
 				.wp-block-navigation.is-style-neo-pills .wp-block-navigation-item__content:hover {
-					background: var(--neo-accent, #FF6B6B);
-					box-shadow: 6px 6px 0px 0px #000;
-					transform: translate(-2px, -2px);
+					background: var(--wp--preset--color--accent-1);
+					box-shadow: var(--sf-shadow-md, 6px 6px 0px 0px var(--wp--preset--color--contrast));
+					transform: var(--sf-hover-transform, translate(-2px, -2px));
 				}
 				.wp-block-navigation.is-style-neo-pills .wp-block-navigation-item__content:active {
 					box-shadow: none;
-					transform: translate(2px, 2px);
+					transform: var(--sf-active-transform, translate(2px, 2px));
 				}
 				.wp-block-navigation.is-style-neo-pills .wp-block-navigation-item.current-menu-item > .wp-block-navigation-item__content {
-					background: var(--neo-muted, #C4B5FD);
+					background: var(--wp--preset--color--accent-3);
 				}',
 			)
 		);
@@ -160,12 +160,12 @@ if ( ! function_exists( 'swishfolio_block_styles' ) ) :
 					transition: all 0.1s ease-out;
 				}
 				.wp-block-navigation.is-style-neo-minimal .wp-block-navigation-item__content:hover {
-					border-bottom-color: #000;
+					border-bottom-color: var(--wp--preset--color--contrast);
 					background: transparent;
 					box-shadow: none;
 				}
 				.wp-block-navigation.is-style-neo-minimal .wp-block-navigation-item.current-menu-item > .wp-block-navigation-item__content {
-					border-bottom-color: var(--neo-accent, #FF6B6B);
+					border-bottom-color: var(--wp--preset--color--accent-1);
 				}',
 			)
 		);
@@ -186,23 +186,23 @@ if ( ! function_exists( 'swishfolio_block_styles' ) ) :
 				}
 				.wp-block-navigation.is-style-neo-stacked .wp-block-navigation-item__content {
 					display: block;
-					border: 4px solid #000;
+					border: var(--sf-border, 4px solid var(--wp--preset--color--contrast));
 					padding: 1rem 1.5rem;
-					background: var(--neo-cream, #FFFDF5);
-					box-shadow: 4px 4px 0px 0px #000;
+					background: var(--wp--preset--color--accent-5);
+					box-shadow: var(--sf-shadow-sm, 4px 4px 0px 0px var(--wp--preset--color--contrast));
 					transition: all 0.1s ease-out;
 				}
 				.wp-block-navigation.is-style-neo-stacked .wp-block-navigation-item__content:hover {
-					background: var(--neo-accent, #FF6B6B);
-					box-shadow: 6px 6px 0px 0px #000;
-					transform: translate(-2px, -2px);
+					background: var(--wp--preset--color--accent-1);
+					box-shadow: var(--sf-shadow-md, 6px 6px 0px 0px var(--wp--preset--color--contrast));
+					transform: var(--sf-hover-transform, translate(-2px, -2px));
 				}
 				.wp-block-navigation.is-style-neo-stacked .wp-block-navigation-item__content:active {
 					box-shadow: none;
-					transform: translate(2px, 2px);
+					transform: var(--sf-active-transform, translate(2px, 2px));
 				}
 				.wp-block-navigation.is-style-neo-stacked .wp-block-navigation-item.current-menu-item > .wp-block-navigation-item__content {
-					background: var(--neo-secondary, #FFD93D);
+					background: var(--wp--preset--color--accent-2);
 				}',
 			)
 		);
